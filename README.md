@@ -7,6 +7,7 @@ NOTE:
 
 1. Start a Git Bash shell and change to a suitable directory _(e.g. $HOME/github)_
 1. Clone this repo: `git clone https://github.com/shazChaudhry/docker-centos.git` and change the directory _(e.g. $HOME/github/docker-centos)_
+1. Create a VM and then SSH to it: `Vagrant up && vagrant ssh` 
 1. Run this command to build the image locally: `docker image build --no-cache --tag shazchaudhry/docker-centos:latest --build-arg GIT_COMMIT=$(git log -1 --format=%H) .`
 1. List the images to ensure our image has been built: `docker image ls`
 1. Run this command to find the git commit from which this image is built: `docker inspect shazchaudhry/docker-centos:latest | jq '.[].ContainerConfig.Labels'`
