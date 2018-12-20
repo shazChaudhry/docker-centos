@@ -16,6 +16,6 @@ Vagrant.configure("2") do |config|
 			v.customize ["modifyvm", :id, "--memory", 4000]
 			v.customize ["modifyvm", :id, "--name", "node1"]
 		end
-		node1.vm.provision :shell, inline: "yum install epel-release -y && yum install jq -y"
+		node1.vm.provision :shell, inline: "yum install -y epel-release && yum install -y git jq"
 	end
 end
