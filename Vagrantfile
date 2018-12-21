@@ -8,14 +8,14 @@ Vagrant.configure("2") do |config|
 	config.hostmanager.manage_guest = true
 	config.vm.provision "docker"
 
-	config.vm.define "node1", primary: true do |node1|
-		node1.vm.hostname = 'node1'
-		node1.vm.network :private_network, ip: "192.168.99.101"
-		node1.vm.provider :virtualbox do |v|
+	config.vm.define "centos7", primary: true do |centos7|
+		centos7.vm.hostname = 'centos7'
+		centos7.vm.network :private_network, ip: "192.168.99.200"
+		centos7.vm.provider :virtualbox do |v|
 			v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-			v.customize ["modifyvm", :id, "--memory", 4000]
-			v.customize ["modifyvm", :id, "--name", "node1"]
+			v.customize ["modifyvm", :id, "--memory", 3000]
+			v.customize ["modifyvm", :id, "--name", "centos7"]
 		end
-		node1.vm.provision :shell, inline: "yum install -y epel-release && yum install -y git jq"
+		centos7.vm.provision :shell, inline: "yum install -y epel-release && yum install -y git jq"
 	end
 end

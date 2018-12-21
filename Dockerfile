@@ -17,8 +17,8 @@ which \
 wget \
 unzip \
 git \
-java-1.8.0-openjdk-devel \
-ansible
+java-1.8.0-openjdk-devel && \
+yum install --nogpgcheck --assumeyes ansible
 
 # Install Terraform
 ENV TERRAFORM_VERSION=0.11.11
