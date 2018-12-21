@@ -1,6 +1,6 @@
 This CentOS 7 based Docker image contains a number of DevOps tools such as Maven, JDK 1.8, Ansible, Terraform, etc. The purpose of this image is to use it in a Jenkins' declarative pipeline as an agent. This means the host running Jenkins does not require installing the DevOps tools mentioned previously.
 
-As an example on how this image is used in a Jenkins based CI / CD pipeline, see this DevOps repo: [https://github.com/shazChaudhry/docker-jenkins-pipeline](https://github.com/shazChaudhry/docker-jenkins-pipeline/blob/master/Jenkinsfile)
+As an example on how this image is used in a Jenkins based CI / CD pipeline, see this DevOps repo: [https://github.com/shazChaudhry/docker-devops](https://github.com/shazChaudhry/docker-devops/blob/master/Jenkinsfile)
 
 NOTE:
 > This image has been tested on Windows 10 pro machine and in a VirtualBox only. It is assumed you already have installed VirtualBox, Vagrant and Git Bash on your machine.
