@@ -9,6 +9,8 @@ LABEL LinkedIn="https://www.linkedin.com/in/shahzad-chaudhry/"
 ## docker inspect shazchaudhry/docker-centos:latest | jq '.[].ContainerConfig.Labels'
 ARG GIT_COMMIT=unspecified
 LABEL git_commit=$GIT_COMMIT
+ARG SOURCE_BRANCH=unspecified
+LABEL source_branch=$SOURCE_BRANCH
 
 RUN  yum update --nogpgcheck --assumeyes && \
 yum install --nogpgcheck --assumeyes \

@@ -4,6 +4,6 @@
 echo "------ HOOK START - BUILD -------"
 printenv
 
-docker image build --no-cache --tag $IMAGE_NAME --build-arg GIT_COMMIT=$SOURCE_COMMIT .
+docker image build --no-cache --tag $IMAGE_NAME --build-arg SOURCE_BRANCH=$SOURCE_BRANCH --build-arg GIT_COMMIT=$SOURCE_COMMIT .
 
 echo "------ HOOK END - BUILD -------"
